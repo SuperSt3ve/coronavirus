@@ -2,3 +2,68 @@ body {
     background-color: #23272a;
     font-family: Montserrat;
 }
+
+.title {
+    /* BORDERS */
+    border-style: solid;
+    border-width: 1px;
+    border-color: #5f6365;
+    background-color: #383c3f;
+    /* TEXT */
+    margin: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 10px;
+    text-align: left;
+    color: #bdbebf;
+    font-size: 20px;
+}
+
+.info #title {
+    text-align: left;
+    font-size:  18px;
+    margin: 0px;
+    padding: 0px;
+    color: #bdbebf;
+    border-top: solid;
+    border-right: solid;
+    border-left: solid;
+    border-width: 1px;
+    border-color: #5f6365;
+    background-color: #383c3f;
+    margin: 10px;
+    margin-left: 2px;
+    padding: 10px;
+    width: 300px;
+}
+
+.info #desc {
+    border-bottom: solid;
+    border-right: solid;
+    border-left: solid;
+    border-width: 1px;
+    border-color: #5f6365;
+    background-color: #383c3f;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    height: 85vh;
+    text-align: left;
+    font-size: 15px;
+    color: #bdbebf;
+    overflow: auto;
+    margin-top: -10px;
+    margin-left: 2px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar{width: 8px;height: 8px;}::-webkit-scrollbar-track{background:#46494b;}::-webkit-scrollbar-thumb{background:#5f6365;}::-webkit-scrollbar-thumb:hover{background:#838587;}
+
+#chartContainer {
+    margin-left: 17.6%;
+    margin-top: -45.699%;
+    margin-right: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #5f6365;
+}

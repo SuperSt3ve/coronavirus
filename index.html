@@ -6,8 +6,106 @@
         <link rel="icon" href="img\coronavirus.png" type="image/icon type">
         <link rel="stylesheet" href="css/style.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+        <script type="text/javascript">
+            window.onload = function () {
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    theme: "dark2",
+			        title: {
+                        text: "2019-nCov cases (updated daily)",
+                        fontColor: "#bdbebf",
+                        fontSize: 18 },
+                    axisX: {
+                        interval: 1,
+                        lineColor: "#bdbebf",
+                        labelFontColor: "#bdbebf",
+                    },
+			        axisY: {
+                        labelFontColor: "#bdbebf",
+                        lineColor: "#bdbebf",
+                        interval: 10000,
+                        maximum: 100000,
+                        minimum: 0,
+                        includeZero: false },
+			        data: [{        
+                        indexLabelFontColor: "#bdbebf",
+                        indexLabelBackgroundColor: "#bdbebf",
+				        name: "Officially confirmed cases by WHO (World Health Organization)",
+                        type: "line",
+                        color: "red",
+                        markerSize: 12,
+                        showInLegend: true,
+				        dataPoints: [
+                            { label: "23/01/2020", y: 581 },
+                            { label: "24/01/2020", y: 846 },
+                            { label: "25/01/2020", y: 1320 },
+				            { label: "26/01/2020", y: 2014 }, 
+				            { label: "27/01/2020", y: 2798 }, 
+				            { label: "28/01/2020", y: 4593 }, 
+				            { label: "29/01/2020", y: 6065 }, 
+				            { label: "30/01/2020", y: 7818 }, 
+				            { label: "31/01/2020", y: 9826 },
+				            { label: "01/02/2020", y: 11953 },
+				            { label: "02/02/2020", y: 14557 },	
+				            { label: "03/02/2020", y: null },	
+				            { label: "04/02/2020", y: null },	
+				            { label: "05/02/2020", y: null },	
+                            { label: "06/02/2020", y: null },
+                            { label: "07/02/2020", y: null },
+                            { label: "08/02/2020", y: null },
+                            { label: "09/02/2020", y: null },
+                            { label: "10/02/2020", y: null },
+                            { label: "11/02/2020", y: null },
+                            { label: "12/02/2020", y: null }]},
+                    {        
+                        indexLabelFontColor: "#bdbebf",
+                        indexLabelBackgroundColor: "#bdbebf",
+				        name: "Estimated cases based on the increase rate",
+                        type: "line",
+                        color: "orange",
+                        markerSize: 12,
+                        showInLegend: true,
+				        dataPoints: [
+                            { label: "23/01/2020", y: null },	
+				            { label: "24/01/2020", y: null },	
+				            { label: "25/01/2020", y: null },	
+                            { label: "26/01/2020", y: null },
+                            { label: "27/01/2020", y: null },
+                            { label: "28/01/2020", y: null },
+                            { label: "29/01/2020", y: null },
+                            { label: "30/01/2020", y: null },
+                            { label: "31/01/2020", y: null },
+                            { label: "01/02/2020", y: null },
+                            { label: "02/02/2020", y: null },
+				            { label: "03/02/2020", y: 17293 },	
+				            { label: "04/02/2020", y: 20751 },	
+				            { label: "05/02/2020", y: 24901 },	
+				            { label: "06/02/2020", y: 29881 },	
+                            { label: "07/02/2020", y: 35857 },
+                            { label: "08/02/2020", y: 43029 },
+                            { label: "09/02/2020", y: 51635 },
+                            { label: "10/02/2020", y: 61962 },
+                            { label: "11/02/2020", y: 74354 },
+                            { label: "12/02/2020", y: 89225 }]}]
+                });
+                chart.render();
+            }
+        </script>
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     </head>
     <body>
-        <div class="title">Novel Coronavirus (2019-nCoV)</div>
+        <div class="title">
+            Novel Coronavirus (2019-nCoV) (website is updated daily)
+        </div>
+        <div class="info">
+            <p id="title">What is the 2019-nCoV?</p>
+            <p id="desc">
+                Coronaviruses (CoV) are a large family of viruses that cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS-CoV) and Severe Acute Respiratory Syndrome (SARS-CoV). A novel coronavirus (nCoV) is a new strain that has not been previously identified in humans.<br>
+                Coronaviruses are zoonotic, meaning they are transmitted between animals and people.  Detailed investigations found that SARS-CoV was transmitted from civet cats to humans and MERS-CoV from dromedary camels to humans. Several known coronaviruses are circulating in animals that have not yet infected humans.<br>
+                Common signs of infection include respiratory symptoms, fever, cough, shortness of breath and breathing difficulties. In more severe cases, infection can cause pneumonia, severe acute respiratory syndrome, kidney failure and even death.<br>
+                Standard recommendations to prevent infection spread include regular hand washing, covering mouth and nose when coughing and sneezing, thoroughly cooking meat and eggs. Avoid close contact with anyone showing symptoms of respiratory illness such as coughing and sneezing.
+            </p>
+        </div>
+        <div id="chartContainer"></div>
     </body>
 </html>
